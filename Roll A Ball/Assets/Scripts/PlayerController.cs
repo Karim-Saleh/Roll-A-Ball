@@ -12,7 +12,10 @@ public class PlayerController : MonoBehaviour
     private float movementX, movementY;
     public float speed = 10.0f;
     private int count;
+    public static string playerName = "player";
     public TextMeshProUGUI countText;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +39,13 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
+   
+
     private void SetCount() 
     {
-        countText.text = "Player Score: " + count.ToString();
+        countText.text = playerName + " Score: " + count.ToString();
     }
+
 
 
     private void OnTriggerEnter(Collider other) 
